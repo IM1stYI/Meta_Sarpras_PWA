@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Buat Pengaduan - Meta Sarpras</title>
+  <meta name="theme-color" content="#14284b">
+  <link rel="icon" href="logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="auth.js"></script>
+</head>
+
+<body>
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <symbol id="back" viewBox="0 0 24 24">
+        <path d="M19 12H5M11 6l-6 6 6 6" />
+      </symbol>
+      <symbol id="cam" viewBox="0 0 24 24">
+        <path d="M4 8h3l1.5-2h7L17 8h3v11H4z" />
+        <circle cx="12" cy="13" r="3.5" />
+      </symbol>
+      <symbol id="shield" viewBox="0 0 24 24">
+        <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" />
+        <path d="M9 12l2 2 4-4" />
+      </symbol>
+      <symbol id="home" viewBox="0 0 24 24">
+        <path d="M4 11l8-7 8 7v9H4z" />
+      </symbol>
+      <symbol id="flag" viewBox="0 0 24 24">
+        <path d="M5 21V4h13l-3 4.5 3 4.5H5" />
+      </symbol>
+      <symbol id="loan" viewBox="0 0 24 24">
+        <rect x="4" y="4" width="16" height="16" rx="3" />
+        <rect x="10" y="10" width="4" height="4" rx="1" />
+      </symbol>
+      <symbol id="spk" viewBox="0 0 24 24">
+        <rect x="5" y="3" width="14" height="18" rx="2" />
+        <circle cx="12" cy="9" r="1.5" />
+        <circle cx="12" cy="15" r="3" />
+      </symbol>
+      <symbol id="wr" viewBox="0 0 24 24">
+        <path d="M14.5 6a4 4 0 0 0 4.8 5.2L9 21.5 5.5 18l10-10.3A4 4 0 0 0 14.5 6z" />
+      </symbol>
+      <symbol id="gauge" viewBox="0 0 24 24">
+        <path d="M4 18a9 9 0 1 1 16 0M12 14l4-5" />
+      </symbol>
+      <symbol id="srch" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="7" />
+        <path d="M20 20l-4-4" />
+      </symbol>
+      <symbol id="chk" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M8 12l3 3 5-6" />
+      </symbol>
+      <symbol id="clk" viewBox="0 0 24 24">
+        <rect x="3.5" y="5" width="17" height="15" rx="2" />
+        <path d="M12 10v4l2 1M8 3v4M16 3v4" />
+      </symbol>
+      <symbol id="wal" viewBox="0 0 24 24">
+        <rect x="3" y="6" width="18" height="14" rx="2" />
+        <path d="M3 10h18M16 15h2" />
+      </symbol>
+      <symbol id="user" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="4" />
+        <path d="M4 21c0-4 4-6 8-6s8 2 8 6" />
+      </symbol>
+      <symbol id="lock" viewBox="0 0 24 24">
+        <rect x="5" y="11" width="14" height="10" rx="2" />
+        <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+      </symbol>
+      <symbol id="key" viewBox="0 0 24 24">
+        <circle cx="8" cy="12" r="3.5" />
+        <path d="M11.5 12H21M18 12v3M15 12v2" />
+      </symbol>
+      <symbol id="eye" viewBox="0 0 24 24">
+        <path d="M2 12s4-5 10-5 10 5 10 5-4 5-10 5S2 12 2 12z" />
+        <circle cx="12" cy="12" r="3" />
+      </symbol>
+      <symbol id="in" viewBox="0 0 24 24">
+        <path d="M14 4h5v16h-5M4 12h11M11 8l4 4-4 4" />
+      </symbol>
+      <symbol id="grad" viewBox="0 0 24 24">
+        <path d="M2 9l10-5 10 5-10 5zM6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5" />
+      </symbol>
+      <symbol id="doc" viewBox="0 0 24 24">
+        <path d="M6 3h9l4 4v14H6z" />
+        <path d="M9 12h7M9 16h7" />
+      </symbol>
+      <symbol id="pin" viewBox="0 0 24 24">
+        <path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z" />
+        <circle cx="12" cy="10" r="2.5" />
+      </symbol>
+      <symbol id="info" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 11v5M12 8v.5" />
+      </symbol>
+    </defs>
+  </svg>
+  <div class="wrap">
+    <header>
+      <div class="in"><a class="logo" href="beranda.html"><img src="logo.png"
+            alt="Politeknik Meta Industri Cikarang"></a><a class="back" href="pengaduan.html" aria-label="Kembali"><svg>
+            <use href="#back" />
+          </svg></a>
+        <h1>Buat pengaduan</h1><a class="avatar" href="#" data-logout title="Keluar">AR</a>
+      </div>
+    </header>
+    <main>
+      <form action="pengaduan.html" method="get">
+        <h2 class="title">Ada fasilitas bermasalah?</h2>
+        <p class="sub">Ceritakan kondisinya. Kami bantu teruskan ke petugas sarana prasarana.</p>
+        <div class="info" style="margin-bottom:20px"><svg>
+            <use href="#info" />
+          </svg><span>Isi informasi dengan jelas agar petugas dapat menemukan masalahnya dengan lebih cepat.</span>
+        </div>
+        <div class="card">
+          <h3>Informasi pengaduan</h3>
+          <p class="hint" style="margin-top:-4px">Tanda * menunjukkan bahwa wajib diisi.</p>
+          <div class="field"><label for="tgl">Tanggal pelaporan *</label><input class="inp" id="tgl" name="tanggal"
+              type="date" value="2025-12-11" required></div>
+          <div class="field"><label for="desk">Deskripsi kerusakan / keluhan *</label><textarea class="inp" id="desk"
+              name="deskripsi" maxlength="1000" required
+              placeholder="Ceritakan kondisi fasilitas, lokasi, dan dampaknya..."></textarea>
+            <p class="hint" style="margin:8px 0 0">Tuliskan kondisi, lokasi ruang, dan kendala yang dirasakan.</p>
+          </div>
+          <div class="field"><label for="foto">Foto kondisi kerusakan *</label>
+            <label class="upload" for="foto" style="font-weight:400;margin:0;cursor:pointer;display:block"><svg>
+                <use href="#cam" />
+              </svg>
+              <p>Ambil atau pilih foto</p><small>JPG, PNG · Maksimal 5 MB</small><span class="pick">Pilih foto</span>
+            </label>
+            <input type="file" id="foto" name="foto" accept="image/jpeg,image/png,image/webp" required
+              style="width:100%;margin-top:12px;font-size:12px">
+            <p class="hint" style="margin:10px 0 0">Pastikan kerusakan terlihat jelas. Hindari mengunggah informasi
+              pribadi dalam foto.</p>
+          </div>
+        </div>
+        <label class="consent"><input type="checkbox" name="setuju" required><span>Laporan ini dikirim oleh saya. Saya
+            bersedia dihubungi apabila diperlukan untuk penanganan fasilitas kampus.</span></label>
+        <button class="btn main" type="submit">Kirim pengaduan sekarang</button>
+        <a class="btn" href="pengaduan.html">Batal</a>
+      </form>
+    </main>
+  </div>
+  <nav>
+    <div class="in">
+      <a href="beranda.html" class=""><svg>
+          <use href="#home" />
+        </svg>Beranda</a><a href="pengaduan.html" class="on"><svg>
+          <use href="#flag" />
+        </svg>Pengaduan</a><a href="peminjaman.html" class=""><svg>
+          <use href="#loan" />
+        </svg>Peminjaman</a>
+    </div>
+  </nav>
+</body>
+
+</html>
