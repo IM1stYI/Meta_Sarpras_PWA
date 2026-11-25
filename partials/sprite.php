@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="id">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Pengaduan - Meta Sarpras</title>
-  <meta name="theme-color" content="#14284b">
-  <link rel="icon" href="logo.png">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script src="auth.js"></script>
-</head>
-
-<body>
-  <svg width="0" height="0" style="position:absolute">
+<svg width="0" height="0" style="position:absolute">
     <defs>
       <symbol id="back" viewBox="0 0 24 24">
         <path d="M19 12H5M11 6l-6 6 6 6" />
@@ -100,56 +84,3 @@
       </symbol>
     </defs>
   </svg>
-  <div class="wrap">
-    <header class="dark">
-      <div class="in"><a class="logo" href="beranda.html"><img src="logo.png"
-            alt="Politeknik Meta Industri Cikarang"></a>
-        <h1>Pengaduan fasilitas<small>LAYANAN PENGADUAN</small></h1><a class="avatar" href="#" data-logout
-          title="Keluar">AR</a>
-      </div>
-    </header>
-    <main>
-      <h2 class="title">Pengaduan saya</h2>
-      <p class="sub">Temukan kembali keluhan dan pantau tindak lanjutnya di sini.</p>
-      <a class="btn main" href="pengaduan-tambah.html" style="margin:0">+ &nbsp;Buat pengaduan</a>
-      <label class="search"><svg>
-          <use href="#srch" />
-        </svg><input type="search" placeholder="Cari judul / isi aduan..."></label>
-      <div class="chips"><a class="chip on" href="#">Semua (1)</a><a class="chip" href="#">Proses (1)</a><a class="chip"
-          href="#">Selesai (0)</a></div>
-      <div class="found"><span>1 pengaduan ditemukan</span><span>Terbaru ↓</span></div>
-      <div class="list">
-        <article class="item">
-          <div class="card-top"><small class="k">PENGADUAN #1</small><span class="badge act"
-              style="margin:0">Proses</span></div>
-          <h4 style="font-size:15px;margin:12px 0 0">AC bunyi, air menetes</h4>
-          <p class="desc">AC mengeluarkan suara dan air menetes sehingga mengganggu perkuliahan.</p>
-          <div class="loc"><svg>
-              <use href="#pin" />
-            </svg>Bangunan A · Lantai 1</div>
-          <div class="foot">
-            <div><small style="font-size:12px;margin-bottom:6px;letter-spacing:0">11 Desember 2025</small><span
-                class="tag blue">1 lampiran</span></div><a href="pengaduan-detail.html">Lihat detail →</a>
-          </div>
-        </article>
-      </div>
-      <div class="tip" style="margin-top:20px"><svg>
-          <use href="#info" />
-        </svg><span>Tanggapan pengaduan akan muncul di sini. Pantau statusnya untuk mengetahui tindak lanjut.</span>
-      </div>
-    </main>
-  </div>
-  <nav>
-    <div class="in">
-      <a href="beranda.html" class=""><svg>
-          <use href="#home" />
-        </svg>Beranda</a><a href="pengaduan.html" class="on"><svg>
-          <use href="#flag" />
-        </svg>Pengaduan</a><a href="peminjaman.html" class=""><svg>
-          <use href="#loan" />
-        </svg>Peminjaman</a>
-    </div>
-  </nav>
-</body>
-
-</html>

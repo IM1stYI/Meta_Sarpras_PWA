@@ -7,4 +7,4 @@ document.querySelectorAll('nav.bn a[data-t]').forEach(a=>a.onclick=e=>{e.prevent
 function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),2200)}
 if('serviceWorker'in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('sw.js').catch(()=>{});
 
-document.querySelectorAll('.avatar').forEach(v=>{v.style.cursor='pointer';v.title='Keluar';v.onclick=()=>{if(confirm('Keluar dari akun?')){try{sessionStorage.clear()}catch(e){}location.replace('login.html')}}});
+// avatar dialihkan via layout.php ke profil.php
