@@ -25,7 +25,7 @@ function pwa_header(array $u, string $judul, string $mode = 'back', string $keci
     <header<?= $mode === 'dark' ? ' class="dark"' : '' ?>>
       <div class="in"><a class="logo" href="beranda.php"><img src="logo.png" alt="Politeknik Meta Industri Cikarang"></a>
         <?php if ($mode === 'back'): ?><a class="back" href="<?= h($kembali) ?>" aria-label="Kembali"><svg><use href="#back" /></svg></a><?php endif; ?>
-        <h1><?= h($judul) ?><?= $kecil ? '<small>' . h($kecil) . '</small>' : '' ?></h1><a class="avatar" href="logout.php" data-logout title="Keluar"><?= h(inisial($u['nama_mahasiswa'])) ?></a>
+        <h1><?= h($judul) ?><?= $kecil ? '<small>' . h($kecil) . '</small>' : '' ?></h1><a class="avatar" href="profil.php" title="Profil Mahasiswa"><?= h(inisial($u['nama_mahasiswa'])) ?></a>
       </div>
     </header>
 <?php }
@@ -34,7 +34,7 @@ function pwa_nav(string $aktif): void { ?>
   </div>
   <nav>
     <div class="in">
-      <a href="beranda.php" class="<?= $aktif === 'beranda' ? 'on' : '' ?>"><svg><use href="#home" /></svg>Beranda</a><a href="pengaduan.php" class="<?= $aktif === 'pengaduan' ? 'on' : '' ?>"><svg><use href="#flag" /></svg>Pengaduan</a><a href="peminjaman.php" class="<?= $aktif === 'peminjaman' ? 'on' : '' ?>"><svg><use href="#loan" /></svg>Peminjaman</a>
+      <a href="beranda.php" class="<?= $aktif === 'beranda' ? 'on' : '' ?>"><svg><use href="#home" /></svg>Beranda</a><a href="pengaduan.php" class="<?= $aktif === 'pengaduan' ? 'on' : '' ?>"><svg><use href="#flag" /></svg>Pengaduan</a><a href="peminjaman.php" class="<?= $aktif === 'peminjaman' ? 'on' : '' ?>"><svg><use href="#loan" /></svg>Peminjaman</a><a href="profil.php" class="<?= $aktif === 'profil' ? 'on' : '' ?>"><svg><use href="#user" /></svg>Profil</a>
     </div>
   </nav>
 </body>
