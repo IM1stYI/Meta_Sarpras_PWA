@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/../app/bootstrap.php'; require __DIR__ . '/partials/layout.php';
 $u = mhs_require();
-$p = Peminjaman::findMilik((int)($_GET['id'] ?? 0), (int)$u['id_mahasiswa']);
+$p = Peminjaman::findMilik((int)($_GET['id'] ?? 0), (int)$u['id_user']);
 if (!$p) redirect('peminjaman.php');
 $st = $p['status_peminjaman']; $admin = $p['nama_admin'] ?? 'Administrator Sarpras';
 $foto = foto_url($p['foto_fisik_barang']);

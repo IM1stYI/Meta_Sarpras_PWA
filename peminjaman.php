@@ -1,6 +1,6 @@
 <?php
 require __DIR__ . '/../app/bootstrap.php'; require __DIR__ . '/partials/layout.php';
-$u = mhs_require(); $id = (int)$u['id_mahasiswa'];
+$u = mhs_require(); $id = (int)$u['id_user'];
 $f = $_GET['status'] ?? ''; if (!in_array($f, ['', 'aktif', 'selesai'], true)) $f = '';
 $q = trim($_GET['q'] ?? '');
 $cnt = Peminjaman::hitung($id); $rows = Peminjaman::byMahasiswa($id, $f, $q);

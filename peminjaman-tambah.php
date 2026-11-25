@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($f['keperluan'] === '') throw new RuntimeException('Keperluan penggunaan wajib diisi.');
         $foto = upload_foto('foto');
         if (!$foto) throw new RuntimeException('Foto barang sebelum dipinjam wajib diunggah.');
-        $id = Peminjaman::create((int)$u['id_mahasiswa'], $f['nama'], $f['jumlah'], $f['pinjam'], $f['batas'], $f['keperluan'], $foto);
+        $id = Peminjaman::create((int)$u['id_user'], $f['nama'], $f['jumlah'], $f['pinjam'], $f['batas'], $f['keperluan'], $foto);
         redirect('peminjaman-detail.php?id=' . $id);
     } catch (RuntimeException $e) { $err = $e->getMessage(); }
 }

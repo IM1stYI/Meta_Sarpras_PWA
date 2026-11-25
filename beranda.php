@@ -1,6 +1,6 @@
 <?php
 require __DIR__ . '/../app/bootstrap.php'; require __DIR__ . '/partials/layout.php';
-$u = mhs_require(); $id = (int)$u['id_mahasiswa'];
+$u = mhs_require(); $id = (int)$u['id_user'];
 $cP = Pengaduan::hitung($id); $cL = Peminjaman::hitung($id);
 $pengaduan = Pengaduan::byMahasiswa($id)[0] ?? null;
 $pinjam = Peminjaman::byMahasiswa($id)[0] ?? null;

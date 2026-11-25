@@ -6,9 +6,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nimLama = trim($_POST['nim'] ?? ''); $pw = $_POST['password'] ?? '';
     if (!csrf_ok($_POST['csrf'] ?? null)) { $err = 'Sesi kedaluwarsa. Muat ulang halaman lalu coba lagi.'; }
     elseif ($nimLama === '' || $pw === '') { $err = 'NIM dan password wajib diisi.'; }
-    elseif ($u = Mahasiswa::login($nimLama, $pw)) {
+    elseif ($u = User::loginMahasiswa($nimLama, $pw)) {
         session_regenerate_id(true);
-        $_SESSION['mhs_id'] = (int)$u['id_mahasiswa'];
+        $_SESSION['mhs_id'] = (int)$u['id_user'];
         redirect('beranda.php');
     } else { $err = 'NIM atau password salah. Silakan coba lagi.'; }
 }

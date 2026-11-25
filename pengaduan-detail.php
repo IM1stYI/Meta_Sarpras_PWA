@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . '/../app/bootstrap.php'; require __DIR__ . '/partials/layout.php';
 $u = mhs_require();
-$p = Pengaduan::findMilik((int)($_GET['id'] ?? 0), (int)$u['id_mahasiswa']);
+$p = Pengaduan::findMilik((int)($_GET['id'] ?? 0), (int)$u['id_user']);
 if (!$p) redirect('pengaduan.php');
 $tg = Tanggapan::byPengaduan((int)$p['id_pengaduan']);
 $foto = foto_url($p['foto_pengaduan']);

@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (empty($_POST['setuju'])) throw new RuntimeException('Centang pernyataan persetujuan terlebih dahulu.');
         $foto = upload_foto('foto');
         if (!$foto) throw new RuntimeException('Foto kondisi kerusakan wajib diunggah.');
-        $id = Pengaduan::create((int)$u['id_mahasiswa'], $f['deskripsi'], $foto, $f['tanggal']);
+        $id = Pengaduan::create((int)$u['id_user'], $f['deskripsi'], $foto, $f['tanggal']);
         redirect('pengaduan-detail.php?id=' . $id);
     } catch (RuntimeException $e) { $err = $e->getMessage(); }
 }
